@@ -6,14 +6,14 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("Settings")]
+    [SerializeField]
+    private BulletData bulletData;
     [Range(0.5f, 5f)]
     public float SlowTimeDuration = 2f;
     [SerializeField]
     private AnimationCurve SlowTimeCurve;
 
     [Space, Header("Game Components")]
-    [SerializeField]
-    private BulletData bulletData;
     [SerializeField]
     private Bullet bulletPrefab;
     [SerializeField]
