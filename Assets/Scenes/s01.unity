@@ -268,7 +268,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  bulletData: {fileID: 11400000, guid: c876f40efd66efd45afbc15bfc5592ef, type: 2}
+  bulletData: {fileID: 11400000, guid: 0d427191c66e27c49a60a76dfdc4d398, type: 2}
   bulletPrefab: {fileID: 107606092557963549, guid: 90d9ea6264298224b9d035b59ca74af2,
     type: 3}
   raycaster: {fileID: 963194229}
@@ -637,10 +637,10 @@ RectTransform:
   m_Father: {fileID: 1246894711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -291}
-  m_SizeDelta: {x: -545.71875, y: -611.80945}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.5, y: 54}
+  m_SizeDelta: {x: 411.28125, y: 78.19055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1008958217
 MonoBehaviour:
@@ -854,7 +854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.08999634, y: 0.3500061}
+  m_AnchoredPosition: {x: 0.08996582, y: 0.35003662}
   m_SizeDelta: {x: -11.660309, y: -7.8982773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151281173
@@ -908,8 +908,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20.4
-  m_fontSizeBase: 22
+  m_fontSize: 20.55
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
@@ -1922,7 +1922,7 @@ PrefabInstance:
     - target: {fileID: 463262488802668872, guid: deb4c0a14eb9fc845b5d8f864a6d4ee2,
         type: 3}
       propertyPath: CinematicImpulseLimit
-      value: 1600
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 463262488815417695, guid: deb4c0a14eb9fc845b5d8f864a6d4ee2,
         type: 3}

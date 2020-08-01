@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Weak Bullet
   m_EditorClassIdentifier: 
   Speed: 8
-  ImpactForce: 250
+  ImpactForce: 150
   LifeTime: 2

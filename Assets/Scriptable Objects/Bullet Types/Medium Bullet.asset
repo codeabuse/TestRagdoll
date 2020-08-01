@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Medium Bullet
   m_EditorClassIdentifier: 
   Speed: 12
-  ImpactForce: 420
+  ImpactForce: 400
   LifeTime: 2
