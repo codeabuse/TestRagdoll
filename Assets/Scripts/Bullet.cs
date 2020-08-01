@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    private const float c_maxSpecificImpulse = 33f;
+    
     public float Speed { get; private set; }
     public float ImpactForce { get; private set; }
     
@@ -42,8 +42,10 @@ public class Bullet : MonoBehaviour
             enemy.ToggleRagdoll(true);
             additionalImpulse = enemy.GetCinematicDeathImpulse(body);
         }
-        
-        body.AddForce(transform.forward * ImpactForce + additionalImpulse, ForceMode.Impulse);
+
+        var resultingImpulse = transform.forward * ImpactForce + additionalImpulse;
+        resultingImpulse = LimitImpulse(resultingImpulse, body.mass);
+        body.AddForce(resultingImpulse, ForceMode.Impulse);
         StopAllCoroutines();
         Destroy(gameObject);
     }
@@ -59,5 +61,14 @@ public class Bullet : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private static Vector3 LimitImpulse(Vector3 force, float mass)
+    {
+        if (force.sqrMagnitude < c_maxSpecificImpulse * c_maxSpecificImpulse)
+            return force;
+        
+        var maxMagnitude = mass * c_maxSpecificImpulse;
+        return force.normalized  * maxMagnitude;
     }
 }
